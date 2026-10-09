@@ -1,15 +1,3 @@
-#!/usr/bin/env python3
-"""Plot measured Sequential-vs-MPI timing from results.csv.
-
-Run both programs with the same vector size so the plotted comparison is fair:
-    ./vector_sequential 1000000 results.csv
-    mpirun --hostfile hostfile -np 4 ./vector_mpi 1000000 results.csv
-    python3 plot_results.py
-
-The script uses the latest row for each mode at the latest vector size for
-which both Sequential and MPI measurements exist. It does not invent timings.
-"""
-
 import argparse
 import csv
 import math
